@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080817">
+  <meta name="description" content="Play neon Tic-Tac-Toe against a smart AI or challenge a friend.">
+  <title>Ultimate Tic-Tac-Toe | Neon Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="eyebrow"><span class="pulse"></span> ARCADE MODE ACTIVATED</div>
+      <h1>ULTIMATE <span>TIC-TAC-TOE</span></h1>
+      <p>One board. Two rivals. Infinite possibilities.</p>
+    </header>
+
+    <section class="game-panel">
+      <div class="top-row">
+        <div>
+          <div class="small-label">GAME MODE</div>
+          <select id="gameMode" aria-label="Choose game mode">
+            <option value="computer">Player vs Computer</option>
+            <option value="two">Two Players</option>
+          </select>
+        </div>
+        <button id="resetScores" class="text-button">Reset Scores ↻</button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-card x-card">
+          <div class="player-symbol x-symbol">X</div>
+          <div class="player-name" id="xName">YOU</div>
+          <div class="score" id="xScore">0</div>
+          <div class="score-caption">WINS</div>
+        </div>
+        <div class="score-card draw-card">
+          <div class="draw-icon">＝</div>
+          <div class="player-name">DRAWS</div>
+          <div class="score" id="drawScore">0</div>
+          <div class="score-caption">TIED GAMES</div>
+        </div>
+        <div class="score-card o-card">
+          <div class="player-symbol o-symbol">O</div>
+          <div class="player-name" id="oName">COMPUTER</div>
+          <div class="score" id="oScore">0</div>
+          <div class="score-caption">WINS</div>
+        </div>
+      </div>
+
+      <div class="turn-panel" aria-live="polite">
+        <span class="turn-dot" id="turnDot"></span>
+        <span id="status">Your turn — choose a square!</span>
+      </div>
+
+      <div class="board" id="board" role="group" aria-label="Tic-Tac-Toe game board">
+        <button class="cell" data-index="0" aria-label="Square 1"></button>
+        <button class="cell" data-index="1" aria-label="Square 2"></button>
+        <button class="cell" data-index="2" aria-label="Square 3"></button>
+        <button class="cell" data-index="3" aria-label="Square 4"></button>
+        <button class="cell" data-index="4" aria-label="Square 5"></button>
+        <button class="cell" data-index="5" aria-label="Square 6"></button>
+        <button class="cell" data-index="6" aria-label="Square 7"></button>
+        <button class="cell" data-index="7" aria-label="Square 8"></button>
+        <button class="cell" data-index="8" aria-label="Square 9"></button>
+      </div>
+
+      <div class="game-actions">
+        <button id="newGame" class="primary-button">↻ New Round</button>
+      </div>
+
+      <div class="tip">
+        <span>✦</span>
+        <span id="tipText">Tip: Take the center or a corner to start strong.</span>
+      </div>
+    </section>
+
+    <footer>
+      <span>BUILT WITH <strong>HTML · CSS · JS</strong></span>
+      <span>NEON ARCADE <span class="footer-dot">●</span></span>
+    </footer>
+  </main>
+</body>
+                                                    </html>
+                                                    
